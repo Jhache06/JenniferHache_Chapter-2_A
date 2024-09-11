@@ -1,0 +1,92 @@
+Name: Jennifer Hache
+Date: 09/10/2024
+
+Description: 
+This application will check for spam words from an email message that may be spam. User will enter message and program will generate how many spam words are found, the score (level of risk), and the words found.
+
+
+Logic Steps:
+
+1. Create a list of 30 common spam words from online research
+	1a. List will be stored as mySpam variable
+
+2. Create function spam_scores(email_message)
+	2a. This will check for spam words.
+	2b. Score variable will have a value of 0, this will count how many words are in the 		email.
+	2c. words_found variable will have an empty list. This will help detect the spam words.
+
+3. Use of .lower() method
+	3a. This will make whatever the user inputs as a message to be lowercase due to case 		sensitivity.
+
+4. Loop for spam word in mySpam
+	4a. Will check every word in mySpam against the words in the email message.
+	4b. If spam words are detected, the score will increment by 1 each time.
+		4b. This will append to word_found.
+
+5. Return the results
+	5a. The function returns the final score and the words from the list in words_found.
+
+6. Define a function rate_spam(score) for spam risk
+	6a. This will rate the likelihood that the email is spam based on the spam score.
+	6b. The output will be displayed so that the user can see the level of risk.
+
+7. Define main() function
+	7a. The user will be asked to enter email message
+	7b. Call spam_scores() to check for spam words
+		7b. This will calculate the spam score and detect the spam words from the list.
+	7c. Call rate_spam() to check the spam likelihood
+
+8. Return results and run the program
+		
+9. If spam words were found, print the list of words.
+
+10. Print the spam score and the spam likelihood score.
+
+11. main() function is called. This will run the whole program.
+
+
+
+Variables Used
+
+1. mySpam : 
+Desc: list that contains the common spam words found in emails.
+
+2. email_message : 
+Desc: The initial email message provided by the user
+
+3. score :
+Desc: will have integer value that is used in the spam_scores function to count how many spam words are found in message.
+
+4. words_found :
+desc: A list in the spam_scores that stores the spam words found in the message
+
+5. spam :
+Desc:A loop variable in the spam_scores function that goes through each spam in the mySpam list.
+
+6. spam_likelihood :
+desc:A string that describes the likelihood of the email being spam based on the score.
+
+
+
+Functions Used
+
+spam_scores(email_message):
+Desc: calculate the spam score for the email message and check which spam words were detected.
+Parameters: email_message
+Returns: tuple : score and words_found
+
+rate_spam(score):
+Desc: This will evaluate the likelihood of the email being spam based on the spam score.
+Parameters: score 
+Returns: A string indicating the level of spam risk based on the score.
+
+main(): 
+Desc: To act as the entry point for the program, ask user to enter message, and call the other functions.
+Parameters: none
+Returns: The spam score, spam likelihood, and any detected spam words.
+
+
+https://github.com/Jhache06/JenniferHache_Chapter-2_A.git
+
+Name: Jennifer Hache
+Date: 09/10/2024
